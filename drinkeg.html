@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #2c3e50, #4ca1af);
+      text-align: center;
+      color: linear-gradient(to right, #2c3e50, #4ca1af);
+    }
+
+    .transparent-img,
+    .container-image {
+      position: absolute;
+      width: 150px;
+      /* Adjust size */
+      opacity: 0.3;
+      /* Make it blend softly */
+      pointer-events: none;
+      /* Prevent interaction */
+    }
+
+    /* Positioning the images */
+    .top-left {
+      top: 10px;
+      left: 10px;
+    }
+
+    .top-right {
+      top: 20px;
+      right: 80px;
+    }
+
+    .bottom-left {
+      bottom: 10px;
+      left: 10px;
+    }
+
+    .bottom-right {
+      bottom: 150px;
+      right: 150px;
+    }
+
+    .center {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .container {
+      width: 70%;
+      margin: auto;
+      padding: 20px;
+      background: linear-gradient(to right, #2c3e50, #4ca1af);
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      color: black;
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      padding: 10px;
+      background: linear-gradient(to right, #2c3e50, #4ca1af);
+      border-radius: 5px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .menu-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .menu-item img {
+      width: 200px;
+      height: 200px;
+      border-radius: 5px;
+      margin-right: 15px;
+    }
+
+    .menu-item p {
+      margin: 0;
+      text-align: left;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #e74c3c;
+    }
+
+
+    .nav-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 30px;
+      background: linear-gradient(to right, #2c3e50, #4ca1af);
+      color: white;
+      transition: 0.3s ease-in-out;
+      box-shadow: linear-gradient(to right, #2c3e50, );
+      align-items: center;
+    }
+
+    .nav-links {
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 30px;
+      background: hwb(211 17% 30%);
+      color: white;
+      transition: 0.3s ease-in-out;
+      box-shadow: linear-gradient(to right, #2c3e50, );
+      align-items: center;
+    }
+
+    .nav-link:hover {
+      background: hsl(211, 97%, 12%);
+      box-shadow: linear-gradient(to right, #2c3e50, );
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="C:\Users\YOR\Downloads\co-removebg-preview.png" class=" transparent-img top-left">
+  <img src="C:\Users\YOR\Downloads\co-removebg-preview.png" class="transparent-img top-right">
+  <img src="C:\Users\YOR\Downloads\co-removebg-preview.png" class="transparent-img bottom-left">
+  <img src="C:\Users\YOR\Downloads\co-removebg-preview.png" class="transparent-img bottom-right">
+
+  <div class="nav-container">
+    <a href="C:\Users\YOR\menueg.html" class="nav-link">Home</a>
+    <a href="C:\Users\YOR\mealeg.html" class="nav-link">Meals</a>
+    <div class="nav-container">
+      <a href="C:\Users\YOR\drinkeg.html" class="nav-links">Drinks</a>
+    </div>
+  </div>
+  <div class="container">
+    <h1>Our Drink Menu</h1>
+    <p>Enjoy our variety Drinks.</p>
+
+    <div class="menu-item">
+      <img src="C:\Users\YOR\Downloads\micciato-removebg-preview.png" alt="Meal 1">
+      <div>
+        <p><strong>Macciato</strong></p>
+        <p></p>
+        <p class="price">$1.99</p>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <img src="C:\Users\YOR\Downloads\mojito-removebg-preview.png" alt="Meal 2">
+      <div>
+        <p><strong>Strwebery Mojito</strong></p>
+        <p></p>
+        <p class="price">$2.99</p>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <img src="C:\Users\YOR\Downloads\images-removebg-preview (1).png" alt="Meal 3">
+      <div>
+        <p><strong>Mango Juice</strong></p>
+        <p></p>
+        <p class="price">$5.00</p>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <img src="C:\Users\YOR\Downloads\coffee-removebg-preview.png" alt="Meal 3">
+      <div>
+        <p><strong>coffee</strong></p>
+        <p></p>
+        <p class="price">$1.00</p>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+
+</html>
